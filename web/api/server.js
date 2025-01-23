@@ -22,14 +22,11 @@ export async function build() {
 const postgrator = new Postgrator({
   migrationPattern: path.join(__dirname, "./migrations/*"),
   driver: "pg",
-//   database: "product_catalog_db",
   validateChecksums: false, 
   execQuery: async (query) => {
     const client = await fastify.pg.connect();
     try {
-        const result = await client.query(query);
-        console.log("Executed query:", query);
-        console.log("Executed query:", result);
+      const result = await client.query(query);
        return result;
     } finally {
       client.release();
