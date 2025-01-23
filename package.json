@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "wattpm dev",
     "build": "wattpm build",
-    "start": "wattpm start"
+    "start": "wattpm start",
+    "postgresql": "docker run --rm --name remix-watt-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:11-alpine"
   },
   "dependencies": {
     "@platformatic/composer": "^2.38.0",
