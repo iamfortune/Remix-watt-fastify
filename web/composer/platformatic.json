@@ -9,7 +9,10 @@
         }
       },
       {
-        "id": "remix"
+        "id": "remix",
+        "proxy": {
+          "prefix": "/"
+        }
       }
     ],
     "refreshTimeout": 1000
